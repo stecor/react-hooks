@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaStar } from "react-icons/fa";
 
+
 // function App() {
 //   const [status, setStatus] = useState("Not delivered");
 //   console.log(status);
@@ -29,16 +30,31 @@ import { FaStar } from "react-icons/fa";
 
 const createArray = (length) => [...Array(length)];
 
-const Star = () => {
-  return <FaStar />;
+const Star = ({selected=false,onSelect}) => {
+  return <FaStar color={selected ? "red" : "gray"} onClick={onSelect} />;
 };
 
 const StarRating = ({ totalStars = 5 }) => {
-  return createArray(totalStars).map((n, i) => <Star key={i} />);
+  
+  const [selectedStars, setSelectedStars] = useState(0);
+
+  return (
+    <>
+    {
+      createArray(totalStars).map((n, i) => (
+    <Star
+      key={i}
+      selected={selectedStars > i}
+      onSelect={() => setSelectedStars(i + 1)}
+    />
+      ))}
+      <p>{selectedStars} of { totalStars}</p>
+    </>
+  );
 };
 
 const App = () => {
-  return <StarRating totalStars={10} />;
+  return <StarRating totalStars={5} />;
 };
 
 export default App;
