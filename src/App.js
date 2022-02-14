@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { FaStar } from "react-icons/fa";
-import StarRating from "./components/StarRating";
 
+import UseEffect from "./components/UseEffect";
+import UseState from "./components/UseState";
 
 // function App() {
 //   const [status, setStatus] = useState("Not delivered");
@@ -36,7 +37,7 @@ import StarRating from "./components/StarRating";
 // };
 
 // const StarRating = ({ totalStars = 5 }) => {
-  
+
 //   const [selectedStars, setSelectedStars] = useState(0);
 
 //   return (
@@ -55,7 +56,14 @@ import StarRating from "./components/StarRating";
 // };
 
 const App = () => {
-  return <StarRating totalStars={5} />;
+  return (
+    <>
+      <UseState totalStars={5} />
+      <UseEffect />
+    </>
+  );
 };
+
+
 
 export default App;

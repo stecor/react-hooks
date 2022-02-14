@@ -20,14 +20,20 @@ const StarRate = ({ totalStars = 5 }) => {
         />
       ))}
       <p>
-        {selectedStars} of {totalStars}
+        Selected {selectedStars} of {totalStars} Stars
       </p>
     </>
   );
 };
 
-const StarRating = () => {
-  return <StarRate totalStars={5} />;
+const UseState = () => {
+  return (
+    <>
+      <p>UseState</p>
+      <StarRate totalStars={5} />
+      <hr />
+    </>
+  );
 };
 
-export default StarRating;
+export default UseState;
