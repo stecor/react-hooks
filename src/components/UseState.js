@@ -31,7 +31,6 @@ const UseState = () => {
     <>
       <p>UseState</p>
       <StarRate totalStars={5} />
-      <hr />
     </>
   );
 };
