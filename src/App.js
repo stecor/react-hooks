@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { FaStar } from "react-icons/fa";
+// import { useState } from "react";
+// import { FaStar } from "react-icons/fa";
 
 import UseEffect from "./components/UseEffect";
 import UseState from "./components/UseState";
@@ -63,7 +63,5 @@ const App = () => {
     </>
   );
 };
-
-
 
 export default App;
