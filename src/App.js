@@ -1,15 +1,21 @@
 import UseEffect from "./components/UseEffect";
 import UseEffectApi from "./components/UseEffectApi";
+import UseReducer from "./components/UseReducer";
+import UseRef from "./components/UseRef";
 import UseState from "./components/UseState";
 
 const App = () => {
   return (
     <>
-      <UseState totalStars={5} />
+      <UseState />
       <hr />
       <UseEffect />
       <hr />
       <UseEffectApi />
+      <hr />
+      <UseReducer />
+      <hr />
+      <UseRef />
     </>
   );
 };
